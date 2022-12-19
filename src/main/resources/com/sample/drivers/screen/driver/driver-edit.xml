@@ -53,6 +53,7 @@
                 </actions>
                 <columns>
                     <column id="type"/>
+                    <column id="documentLink" caption="Document" />
                 </columns>
                 <buttonsPanel>
                     <button action="documentsTable.create"/>

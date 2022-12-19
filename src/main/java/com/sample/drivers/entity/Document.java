@@ -1,5 +1,6 @@
 package com.sample.drivers.entity;
 
+import io.jmix.core.FileRef;
 import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.metamodel.annotation.JmixEntity;
 
@@ -25,6 +26,17 @@ public class Document {
     @JoinColumn(name = "DRIVER_ID", nullable = false)
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     private Driver driver;
+
+    @Column(name = "FILE_REF", length = 1024)
+    private FileRef fileRef;
+
+    public FileRef getFileRef() {
+        return fileRef;
+    }
+
+    public void setFileRef(FileRef fileRef) {
+        this.fileRef = fileRef;
+    }
 
     public Driver getDriver() {
         return driver;
